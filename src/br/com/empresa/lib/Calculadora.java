@@ -1,7 +1,20 @@
 package br.com.empresa.lib;
 
 public class Calculadora {
-	public double Soma(double a, double b) {
-		return a+b;
+	private double resultado;
+	
+	public Calculadora() {
+	}
+	
+	public Calculadora(double valor) {
+		this.resultado = valor;
+	}
+	
+	public double getResultado() {
+		return this.resultado;
+	}
+	
+	public double Somar(double valor) {
+		return this.resultado += valor;
 	}
 }
