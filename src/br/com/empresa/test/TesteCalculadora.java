@@ -29,6 +29,20 @@ public class TesteCalculadora {
 		assertEquals(calculadora.getResultado(), 2.33, 0); 
 	}
 	
+	@Test 
+	public void somaValorEDivide() {
+		calculadora.Somar(20);
+		calculadora.Dividir(2);
+		assertEquals(calculadora.getResultado(), 10, 0);		
+	}
+	
+	@Test
+	public void criaCalculadoraComValorESubtrai() {
+		calculadora = new Calculadora(10);
+		calculadora.Subtrair(5);
+		assertEquals(calculadora.getResultado(), 5, 0);
+	} 
+	
 	@Test
 	public void criaCalculadoraComValorInicial() {
 		calculadora = new Calculadora(10);
@@ -36,4 +50,5 @@ public class TesteCalculadora {
 		calculadora.Somar(3);
 		assertEquals(calculadora.getResultado(), 13, 0); 
 	}	
+	
 }
