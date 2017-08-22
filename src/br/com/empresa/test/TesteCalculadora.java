@@ -37,18 +37,25 @@ public class TesteCalculadora {
 	}
 	
 	@Test
-	public void criaCalculadoraComValorESubtrai() {
+	public void subtrairCalculadoraValorInicial() {
 		calculadora = new Calculadora(10);
 		calculadora.Subtrair(5);
 		assertEquals(calculadora.getResultado(), 5, 0);
 	} 
 	
 	@Test
-	public void criaCalculadoraComValorInicial() {
+	public void somarCalculadoraValorInicial() {
 		calculadora = new Calculadora(10);
 		assertEquals(calculadora.getResultado(), 10, 0);
 		calculadora.Somar(3);
 		assertEquals(calculadora.getResultado(), 13, 0); 
+	}	
+
+	@Test
+	public void multiplicarCalculadora() {
+		calculadora = new Calculadora(10);
+		calculadora.Multiplicar(3);
+		assertEquals(calculadora.getResultado(), 30, 0); 
 	}	
 	
 }
